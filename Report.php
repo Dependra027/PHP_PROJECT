@@ -3,7 +3,6 @@ include('header.php');
 checkUser();  // Function to check user authentication
 userArea();
 
-
 // Initialize filters from URL parameters or form submission
 $category_filter = isset($_POST['category_id']) ? $_POST['category_id'] : '';
 $start_date = isset($_GET['from']) ? $_GET['from'] : (isset($_POST['start_date']) ? $_POST['start_date'] : '');
@@ -47,8 +46,9 @@ $res = mysqli_query($con, $query);
 // Check if no data found
 $no_data_message = (mysqli_num_rows($res) == 0) ? "No data found for the selected filters." : "";
 ?>
+
 <script>
-    document.title="Report";
+    document.title = "Report";
     document.getElementById("Report_link").classList.add('active');
 </script>
 
@@ -95,12 +95,14 @@ $no_data_message = (mysqli_num_rows($res) == 0) ? "No data found for the selecte
                     </div>
                 </form>
 
+                
+
                 <!-- Display message if no data found -->
                 <?php if ($no_data_message): ?>
                     <div style="color: red;"><?php echo $no_data_message; ?></div>
                 <?php endif; ?>
-<br>
-<br>
+                <br><br>
+
                 <!-- Displaying the report table -->
                 <?php if (mysqli_num_rows($res) > 0): ?>
                     <br><br>
@@ -126,6 +128,8 @@ $no_data_message = (mysqli_num_rows($res) == 0) ? "No data found for the selecte
                             </tr>
                         </table>
                     </div>
+                    <!-- Download Button -->
+                <a href="download_report.php" class="btn btn-success">Download Report</a>
                 <?php endif; ?>
             </div>
         </div>
