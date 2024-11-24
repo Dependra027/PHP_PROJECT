@@ -92,6 +92,8 @@ $no_data_message = (mysqli_num_rows($res) == 0) ? "No data found for the selecte
             </tr>
         </tbody>
     </table>
+    <a href="send_expense_report.php" class="btn send">Send Report to Email</a>
+
 <?php endif; ?>
 
 <?php

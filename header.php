@@ -49,7 +49,8 @@ include('function.php');
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            <!-- <img src="images/icon/logo.png" alt="CoolAdmin" /> -->
+                            <h1>Expense Tracker</h1>
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -78,7 +79,7 @@ include('function.php');
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                <img src="images/icon/imagePhp-removebg.png" alt="CoolAdmin" style="width: 70px; height: auto;">
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
